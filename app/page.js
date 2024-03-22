@@ -17,7 +17,9 @@ export default function Component() {
     setJoyrideSteps([
       {
         target: ".bs-cart-button",
-        content: "This is the cart button.",
+        title:"Orders",
+        content: "Here you'll find all the items in your cart for this patient.",
+        placement:"left",
         disableBeacon: true,
       },
       {
@@ -33,8 +35,9 @@ export default function Component() {
       {
         target: ".gr-group-button",
         content: "This is the group button.",
-        disableBeacon: true,
+        // disableBeacon: true,
       },
+      
     ]);
   }, []);
 
@@ -58,7 +61,7 @@ export default function Component() {
           </div>
         </div>
       </div>
-      {/* Rest of the content */}
+      {/* // */}
 
       <div className="flex-1 flex overflow-hidden">
         <div className="flex w-60 border-r border-l-gray-200 overflow-auto flex-col">
@@ -145,26 +148,27 @@ export default function Component() {
         <div className="flex w-14 items-start border-l">
           <div className="flex-1 flex flex-col ">
             <Button
-              className="rounded-full -top-2 hover:bg-white"
+              className="rounded-full -top-2  hover:bg-white"
               variant="ghost"
             >
               <BsCart3 className="bs-cart-button bg-red-400 " size={20} />
             </Button>
-            <Button className=" rounded-full -top-2" variant="ghost">
+            <Button className=" rounded-full -top-2 mt-3 " variant="ghost">
               <RiPencilLine className="ri-pencil-button  " size={20} />
             </Button>
-            <Button className="rounded-full -top-2" variant="ghost">
+            <Button className="rounded-full mt-3 " variant="ghost">
               <IoDocumentTextOutline
                 className=" io-document-button"
                 size={20}
               />
             </Button>
-            <Button className=" rounded-full " variant="ghost">
+            <Button className=" rounded-full mt-3  " variant="ghost">
               <GrGroup className="gr-group-button" size={20} />
             </Button>
           </div>
         </div>
       </div>
+
       <Joyride
         steps={joyrideSteps}
         run={runJoyride}
@@ -175,14 +179,22 @@ export default function Component() {
         disableScrolling={true}
         disableScrollParentFix={true}
         spotlightClicks={true}
+        locale={{
+          last: "Explore",
+        }}
         styles={{
           options: {
-            arrowColor: "#fff",
-            backgroundColor: "#007aff",
+            arrowColor: "#027D77",
+            backgroundColor: "#FFFFFF",
             overlayColor: "rgba(0, 0, 0, 0.5)",
-            primaryColor: "#fff",
+            primaryColor: "#027D77",
             textColor: "#333",
             zIndex: 10000,
+            title: {
+              fontSize: "24px",
+              fontWeight: "bold",
+              marginBottom: "16px",
+            },
           },
         }}
       />
