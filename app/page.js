@@ -185,7 +185,7 @@ export default function Component() {
               className="rounded-full -top-2  hover:bg-white"
               variant="ghost"
             >
-              <BsCart3 className="bs-cart-button bg-red-400 " size={20} />
+              <BsCart3 className="bs-cart-button " size={20} />
             </Button>
             <Button className=" rounded-full -top-2 mt-3 " variant="ghost">
               <RiPencilLine className="ri-pencil-button  " size={20} />
